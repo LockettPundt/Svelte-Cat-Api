@@ -1,25 +1,5 @@
 <script>
-  import axios from 'axios';
-  // import dotenv from 'dotenv';
-
-  // dotenv.config();
-
-  const API_KEY = '11765b01-2516-4db9-8e2a-2083dc6938d7';
-  const catBreedsUrl = `https://api.thecatapi.com/v1/breeds`;
-
-  let catDataRes = null;
-
-  const getCatData = async () => {
-    const data = await axios.get(catBreedsUrl, {
-      method: 'GET',
-      headers: {
-        'x-api-key': API_KEY,
-      },
-    });
-    const res = data.data;
-    console.log(res);
-    catDataRes = res;
-  };
+  export let getCatData;
 </script>
 
 <style>
@@ -45,4 +25,6 @@
   }
 </style>
 
-<button on:click={getCatData}>Cats!</button>
+<button on:click={getCatData}>
+  <slot />
+</button>
