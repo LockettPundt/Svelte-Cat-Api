@@ -1,5 +1,5 @@
 <script>
-  import CatButton from './CatButton.svelte';
+  import MainPage from './MainPage.svelte';
 </script>
 
 <style>
@@ -13,5 +13,5 @@
 </style>
 
 <div class="App">
-  <CatButton />
+  <MainPage />
 </div>
