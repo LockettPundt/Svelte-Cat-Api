@@ -1,5 +1,11 @@
 <script>
   export let getCatData;
+  import darkMode from './darkModeStore';
+  import { get } from 'svelte/store';
+
+  let darkModeValue = get(darkMode);
+
+  darkMode.subscribe((value) => (darkModeValue = value));
 </script>
 
 <style>
@@ -16,6 +22,7 @@
     outline: none;
     width: 200px;
     font-variant-numeric: tabular-nums;
+    transition: 0.4s ease-in-out;
   }
 
   button:hover {
@@ -25,8 +32,14 @@
   button:active {
     background-color: rgba(30, 215, 96, 0.3);
   }
+
+  button.darkModeValue {
+    background-color: rgb(28, 28, 28);
+    color: rgb(30, 215, 96);
+    transition: 0.4s ease-in-out;
+  }
 </style>
 
-<button on:click={getCatData}>
+<button on:click={getCatData} class:darkModeValue>
   <slot />
 </button>
