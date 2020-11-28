@@ -30,12 +30,18 @@
 <style>
   div {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 120px);
+    grid-template-columns: repeat(4, 120px);
     justify-items: center;
     justify-content: center;
     gap: 10px;
     width: 90%;
     margin: 50px auto;
+  }
+
+  @media screen and (max-width: 850px) {
+    div {
+      grid-template-columns: repeat(auto-fill, 120px);
+    }
   }
 
   img {
