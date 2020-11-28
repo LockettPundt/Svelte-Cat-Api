@@ -37,10 +37,11 @@
 </script>
 
 <style>
-  main {
-    width: 75%;
-    height: 600px;
+  section {
+    width: 70%;
+    min-height: 400px;
     background-color: rgb(70, 70, 70);
+    margin: auto;
     border-radius: 1em;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.3) 0px 6px 20px 0px;
     transition: 0.4s ease-in-out;
@@ -52,10 +53,11 @@
     justify-content: center;
     border-radius: 1em;
     width: 100%;
-    height: 100%;
+    min-height: 300px;
+    margin: 20px 0;
   }
 
-  main.darkModeValue {
+  section.darkModeValue {
     background-color: rgba(30, 215, 96, 0.8);
     transition: 0.4s ease-in-out;
   }
@@ -83,7 +85,7 @@
   }
 </style>
 
-<main class:darkModeValue>
+<section class:darkModeValue>
   <DarkModeButton />
   <div>
     {#if !catData.length}
@@ -107,4 +109,4 @@
       </select>
     {/if}
   </div>
-</main>
+</section>

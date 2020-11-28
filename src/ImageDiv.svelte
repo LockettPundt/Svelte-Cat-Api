@@ -1,7 +1,13 @@
 <script>
   import axios from 'axios';
   export let breedId = null;
-  export let numImages = 4;
+  export let numImages = 1;
+  import darkMode from './darkModeStore';
+  import { get } from 'svelte/store';
+
+  let darkModeValue = get(darkMode);
+
+  darkMode.subscribe((value) => (darkModeValue = value));
   const API_KEY = '11765b01-2516-4db9-8e2a-2083dc6938d7';
 
   let imageData;
@@ -30,12 +36,12 @@
 <style>
   div {
     display: grid;
-    grid-template-columns: repeat(4, 120px);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     justify-content: center;
     gap: 10px;
     width: 90%;
-    margin: 50px auto;
+    margin: 10px auto 40px auto;
   }
 
   @media screen and (max-width: 850px) {
@@ -44,9 +50,19 @@
     }
   }
 
+  p {
+    color: rgb(30, 215, 96);
+    transition: color 0.4s ease-in-out;
+  }
+
+  p.darkModeValue {
+    color: rgb(28, 28, 28);
+    transition: color 0.4s ease-in-out;
+  }
+
   img {
-    width: 120px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.3) 0px 6px 20px 0px;
   }
@@ -56,6 +72,7 @@
   {#if imageData && breedId}
     {#each imageData as { url, breeds }}
       <img src={url} alt={`image of a ${breeds[0].name}`} />
+      <p class:darkModeValue>{breeds[0].description}</p>
     {/each}
   {/if}
 </div>

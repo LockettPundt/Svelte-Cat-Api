@@ -10,13 +10,12 @@
 <style>
   :global(body) {
     margin: 0;
+    box-sizing: border-box;
     font-family: Helvetica, sans-serif;
   }
   .App {
-    display: flex;
     height: 100vh;
-    flex-direction: column;
-    align-items: center;
+    display: flex;
     justify-content: center;
     background-color: rgb(28, 28, 28);
     transition: 0.4s ease-in-out;
