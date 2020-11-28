@@ -52,6 +52,8 @@
 
   h3 {
     color: rgb(30, 215, 96);
+    height: 200px;
+    overflow-y: scroll;
     transition: color 0.4s ease-in-out;
   }
 
@@ -61,7 +63,7 @@
   }
 
   img {
-    width: 200px;
+    width: auto;
     height: 200px;
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.3) 0px 6px 20px 0px;
