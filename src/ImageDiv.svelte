@@ -47,7 +47,7 @@
 </style>
 
 <div>
-  {#if imageData}
+  {#if imageData && breedId}
     {#each imageData as { url, breeds }}
       <img src={url} alt={`image of a ${breeds[0].name}`} />
     {/each}

@@ -20,10 +20,6 @@
   };
   let currentBreed;
 
-  const selectBreed = (e) => {
-    currentBreed = e.target.value;
-  };
-
   // to set one reactive variable
   $: console.log(catData);
 
@@ -75,8 +71,8 @@
   {/if}
   {#if catData.length}
     <ImageDiv breedId={currentBreed} />
-    <!-- svelte-ignore a11y-no-onchange -->
-    <select on:change={(e) => selectBreed(e)}>
+    <!-- binds the variable to the value selected -->
+    <select bind:value={currentBreed}>
       <!-- 2 ways to do this... -->
       {#each catData as { name, id }, i}
         {#if i === 0}
