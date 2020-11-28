@@ -54,7 +54,10 @@
     font-size: 1.1em;
     font-weight: 900;
     outline: none;
-    width: 400px;
+    width: fit-content;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
 
   select:hover {

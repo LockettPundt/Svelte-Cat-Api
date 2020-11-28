@@ -30,17 +30,19 @@
 <style>
   div {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: repeat(auto-fill, 120px);
+    justify-items: center;
     justify-content: center;
     gap: 10px;
     width: 90%;
-    margin: 20px auto;
+    margin: 50px auto;
   }
 
   img {
-    width: 100px;
-    height: 80px;
+    width: 120px;
+    height: 100px;
     border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.3) 0px 6px 20px 0px;
   }
 </style>
 
