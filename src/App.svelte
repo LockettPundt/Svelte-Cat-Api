@@ -8,7 +8,12 @@
     font-family: Helvetica, sans-serif;
   }
   .App {
-    text-align: center;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(28, 28, 28);
   }
 </style>
 
