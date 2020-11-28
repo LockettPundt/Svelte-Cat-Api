@@ -11,8 +11,16 @@
   :global(body) {
     margin: 0;
     box-sizing: border-box;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Apercu', Helvetica, sans-serif;
   }
+
+  @font-face {
+    font-family: 'Apercu';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./apercu_regular-webfont.woff');
+  }
+
   .App {
     height: 100vh;
     display: flex;

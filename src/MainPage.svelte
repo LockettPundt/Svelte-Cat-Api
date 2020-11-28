@@ -38,7 +38,7 @@
 
 <style>
   section {
-    width: 70%;
+    width: 60%;
     min-height: 400px;
     background-color: rgb(70, 70, 70);
     margin: auto;

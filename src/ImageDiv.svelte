@@ -38,24 +38,24 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    justify-content: center;
+    align-items: center;
     gap: 10px;
     width: 90%;
     margin: 10px auto 40px auto;
   }
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 640px) {
     div {
-      grid-template-columns: repeat(auto-fill, 120px);
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
-  p {
+  h3 {
     color: rgb(30, 215, 96);
     transition: color 0.4s ease-in-out;
   }
 
-  p.darkModeValue {
+  h3.darkModeValue {
     color: rgb(28, 28, 28);
     transition: color 0.4s ease-in-out;
   }
@@ -72,7 +72,7 @@
   {#if imageData && breedId}
     {#each imageData as { url, breeds }}
       <img src={url} alt={`image of a ${breeds[0].name}`} />
-      <p class:darkModeValue>{breeds[0].description}</p>
+      <h3 class:darkModeValue>{breeds[0].description}</h3>
     {/each}
   {/if}
 </div>
