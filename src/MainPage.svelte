@@ -46,6 +46,13 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.3) 0px 6px 20px 0px;
     transition: 0.4s ease-in-out;
   }
+
+  @media screen and (max-width: 550px) {
+    section {
+      width: 90%;
+    }
+  }
+
   div {
     display: flex;
     flex-direction: column;
@@ -58,13 +65,13 @@
   }
 
   section.darkModeValue {
-    background-color: rgba(30, 215, 96, 0.8);
+    background-color: rgb(30, 215, 96);
     transition: 0.4s ease-in-out;
   }
 
   select {
     color: rgb(28, 28, 28);
-    background-color: rgba(30, 215, 96, 0.8);
+    background-color: rgb(30, 215, 96);
     border: none;
     border-radius: 2em;
     padding: 1em 1em;

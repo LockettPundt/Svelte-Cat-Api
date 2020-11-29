@@ -16,7 +16,7 @@
     font-size: 1.3em;
     font-weight: 900;
     color: rgb(28, 28, 28);
-    background-color: rgba(30, 215, 96, 0.8);
+    background-color: rgb(30, 215, 96);
     border-radius: 2em;
     border: none;
     outline: none;

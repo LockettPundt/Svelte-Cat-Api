@@ -12,6 +12,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Apercu', Helvetica, sans-serif;
+    background-color: rgb(28, 28, 28);
   }
 
   @font-face {

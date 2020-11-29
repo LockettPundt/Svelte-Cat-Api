@@ -36,7 +36,7 @@
   }
 
   i {
-    color: rgba(30, 215, 96, 0.8);
+    color: rgb(30, 215, 96);
     transition: 0.4s ease-in-out;
   }
 

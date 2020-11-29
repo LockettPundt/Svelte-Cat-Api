@@ -48,6 +48,9 @@
     div {
       grid-template-columns: repeat(1, 1fr);
     }
+    img {
+      max-width: 300px;
+    }
   }
 
   h3 {
