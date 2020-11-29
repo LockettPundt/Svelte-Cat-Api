@@ -90,6 +90,11 @@
     color: rgb(30, 215, 96);
     transition: 0.4s ease-in-out;
   }
+  @media screen and (max-width: 300px) {
+    select {
+      width: inherit;
+    }
+  }
 </style>
 
 <section class:darkModeValue>

@@ -71,6 +71,12 @@
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.3) 0px 6px 20px 0px;
   }
+
+  @media screen and (max-width: 370px) {
+    img {
+      width: inherit;
+    }
+  }
 </style>
 
 <div>
